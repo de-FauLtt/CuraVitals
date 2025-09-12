@@ -78,12 +78,12 @@ const LabDashboard = () => {
     console.log("Uploading report for worker:", workerId);
   };
 
-  const handleVerification = (reportId: string, action: "approve" | "reject") => {
+  const handleVerification = (reportId, action) => {
     // Handle verification logic
     console.log(`${action} report:`, reportId);
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status) => {
     switch(status) {
       case "verified": return <CheckCircle className="w-4 h-4 text-green-500" />;
       case "uploaded": return <Upload className="w-4 h-4 text-blue-500" />;

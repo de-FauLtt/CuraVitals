@@ -39,7 +39,7 @@ const Landing = () => {
     }
   ];
 
-  const handleLogin = (route: string) => {
+  const handleLogin = (route) => {
     navigate(route);
   };
 
@@ -121,7 +121,7 @@ const Landing = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {userTypes.map(({ type, title, description, icon: Icon, route }) => (
-              <Card key={type} className="group hover:shadow-lg smooth-transition cursor-pointer border-2 hover:border-primary/20">
+              <Card key={type} className="group hover:shadow-lg smooth-transition cursor-pointer border-2 hover:border-primary/20 flex flex-col">
                 <CardHeader className="text-center pb-4">
                   <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 smooth-transition">
                     <Icon className="w-8 h-8 text-primary" />
@@ -129,7 +129,7 @@ const Landing = () => {
                   <CardTitle className="text-lg">{title}</CardTitle>
                   <CardDescription className="text-sm">{description}</CardDescription>
                 </CardHeader>
-                <CardContent className="pt-0">
+                <CardContent className="pt-0 mt-auto">
                   <Button 
                     onClick={() => handleLogin(route)}
                     variant="default" 
