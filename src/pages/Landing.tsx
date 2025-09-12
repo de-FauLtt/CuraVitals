@@ -36,20 +36,6 @@ const Landing = () => {
       description: "Upload verified test reports for workers",
       icon: Stethoscope,
       route: "/dashboard/lab"
-    },
-    {
-      type: "employer", 
-      title: "Employer",
-      description: "Verify worker health status and compliance",
-      icon: Building2,
-      route: "/dashboard/employer"
-    },
-    {
-      type: "government",
-      title: "Government Official",
-      description: "Access health surveillance and insights",
-      icon: FileText,
-      route: "/dashboard/government"
     }
   ];
 
@@ -68,7 +54,7 @@ const Landing = () => {
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-foreground">Kerala Health Platform</h1>
+                <h1 className="text-xl font-bold text-foreground">CuraVitals</h1>
                 <p className="text-xs text-muted-foreground">Digital Health Records for All</p>
               </div>
             </div>
@@ -133,7 +119,7 @@ const Landing = () => {
             <p className="text-muted-foreground">Select your role to access the appropriate dashboard</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {userTypes.map(({ type, title, description, icon: Icon, route }) => (
               <Card key={type} className="group hover:shadow-lg smooth-transition cursor-pointer border-2 hover:border-primary/20">
                 <CardHeader className="text-center pb-4">
@@ -199,7 +185,7 @@ const Landing = () => {
             <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
               <Heart className="w-5 h-5 text-foreground" />
             </div>
-            <span className="font-semibold">Kerala Health Platform</span>
+            <span className="font-semibold">CuraVitals</span>
           </div>
           <p className="text-sm text-gray-300">
             Empowering communities through accessible digital healthcare • Built for Kerala's migrant workers
